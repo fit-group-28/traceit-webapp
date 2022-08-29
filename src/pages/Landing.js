@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import logoImage from "../assets/logo.png";
 
 function Landing() {
@@ -8,39 +7,39 @@ function Landing() {
     }
 
     return (
-        <body class="full-height" style={styles['.background']}>
-            <nav class="navbar">
-                <div class="container">
-                    <div id="navMenu" class="navbar-menu">
-                        <div class="navbar-start">
+        <div className="full-height" style={styles['.background']}>
+            <nav className="navbar">
+                <div className="container">
+                    <div id="navMenu" className="navbar-menu">
+                        <div className="navbar-start">
                             <a href="/login">
-                                <img class="py-2 mr-6" src={logoImage} style={styles[".logo"]}></img>
+                                <img className="py-2 mr-6" alt="TraceIt Logo" src={logoImage} style={styles[".logo"]}></img>
                             </a>
-                            <a class="navbar-item" href="/login">
+                            <a className="navbar-item" href="/login">
                                 Login
                             </a>
-                            <a class="navbar-item" href="/dashboard">
+                            <a className="navbar-item" href="/dashboard">
                                 Dashboard
                             </a>
-                            <a class="navbar-item" href="/*">
+                            <a className="navbar-item" href="/*">
                                 Not Found
                             </a>
                         </div>
 
-                        <div class="navbar-end">
+                        <div className="navbar-end">
                         </div>
                     </div>
                 </div>
             </nav>
 
-            <section class="hero is-fullheight-with-navbar">
-                <div class="hero-body">
+            <section className="hero is-fullheight-with-navbar">
+                <div className="hero-body">
                     <p class="title is-size-1">
                         TraceIt - Group 28
                     </p>
                 </div>
             </section>
-        </body>
+        </div>
 
     )
 }
