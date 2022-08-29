@@ -4,12 +4,14 @@ import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import NoPage from "./pages/NoPage";
+// import Navbar from "./components/Navbar";
 
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* <Route path="/" element={<Navbar />} /> */}
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
