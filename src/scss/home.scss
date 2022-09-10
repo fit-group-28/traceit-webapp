@@ -1,0 +1,63 @@
+.row{display: flex;flex-wrap: nowrap;}
+.head{background: #233775;height: 60px;color: #fff;margin-bottom: 15px;
+	.icon{width: 30px;height: 30px;margin: 15px;}
+	.searchIcon{width: 20px;height: 20px;position: absolute;margin: 20px 0 0 70px;z-index: 2;}
+	.input{padding: 5px 5px 5px 35px;height: 30px;margin: 15px 50px 15px 0;width: 300px;}
+	.headMenu{width: 150px;text-align: center;line-height: 60px;height: 60px;}
+	.uesrInfo{margin:10px 0 0 190px;
+		.role{font-size: 10px;}
+	}
+}
+.topLeft{width: 47%;background: #fff;border-radius: 15px;height: 250px;
+	.name{width: 430px;text-align: center;color: #34477f;font-size: 20px;font-weight: bold;margin: 5px 0;}
+	.histogram{
+		.y-axis{position: absolute;
+			.scale{width: 60px;text-align: right;height: 40px;font-size: 10px;color: #999;}
+		}
+		.x-axis{position: absolute;margin: 180px 0 0 80px;
+			.scale{width: 65px;text-align: center;height: 40px;font-size: 10px;color: #999;line-height: 12px;}
+		}
+		.dataList{position: absolute;margin: 15px 0 0 80px ;height: 160px;
+			.data{display: flex;flex-direction: column-reverse;width: 45px;margin: 0 10px;
+				.top{width: 45px;height: 30px;background: #1f4aa9;margin: 0;border-top-left-radius: 5px;border-top-right-radius: 5px;}
+				.bottom{width: 45px;height: 50px;background: #5a72f6;margin: 0;}
+			}
+		}
+	}
+	.totalData{background: #e9e3d4;color: #224da9;text-align: center;width: 140px;border-radius: 7px;margin: 25px 0;font-size: 12px;}
+	.money{font-weight: bold;font-size: 25px;}
+}
+.topMid{width: 15%;margin: 0 2%;text-align: center;
+	.module{height: 50px;line-height: 50px;margin: 20px 0;color: #224da9;border-radius: 10px;}
+	.choosed{background: #233775;color:#fff}
+	
+}
+.topRight{width: 33%;background: #fff;border-radius: 15px;height: 250px;
+	.name{text-align: center;color: #34477f;font-size: 20px;font-weight: bold;margin: 5px 0;}
+	.order{color: #224da9;width: 300px;}
+	.icon{width: 25px;height: 25px;margin: 0 30px 30px 10px;}
+}
+.bottom{margin-top: 15px;}
+.width{width: 40%;}
+.midLeft{background: #fff;border-radius: 15px;height: 250px;
+	.totalTxt{width: 15%;margin: 25px 5% 0 5%;font-weight: bold;color: #214ca9;}
+	.icon{width: 50px;height: 50px;margin: 16px 16%;}
+	.money{margin: 20px 1%;font-weight: bold;color: #214ca9;width: 140px;text-align: right;font-size: 20px;}
+}
+.bottomLeft{background: linear-gradient(to right,#667da6,#233775);border-radius: 15px;height: 100px;margin-top: 15px;
+	.name{width: 120px;color: #fff;font-weight: bold;padding: 25px;}
+	.icon{width: 40px;height: 40px;margin: 30px 8%;border-radius: 50%;}
+}
+.bottomMid{background: #fff;border-radius: 15px;height: 365px;width: 24%;margin: 0 1%;
+	.name{width: 100%;text-align: center;color: #34477f;font-size: 20px;font-weight: bold;margin: 5px 0;}
+	.icon{width: 40px;height: 40px;margin: 6px 8%;border-radius: 50%;}
+	.txt{margin-top: 12px;}
+}
+.bottomRight{background: #fff;border-radius: 15px;height: 365px;width: 33%;
+	.name{width: 100%;text-align: center;color: #34477f;font-size: 20px;font-weight: bold;margin: 5px 0;}
+	.table{width: 70%;margin: 0 15%;
+		.tableTitle{width: 50%;text-align: center;font-weight: bold;height: 50px;line-height: 50px;}
+		.tableLeft{width: 50%;text-align: center;font-weight: bold;background: #d9d9d9;border: 1px solid #eee;height: 50px;line-height: 50px;}
+		.tableRight{width: 50%;text-align: center;font-weight: bold;background: #f8f5ec;border: 1px solid #eee;height: 50px;line-height: 50px;}
+	}
+}

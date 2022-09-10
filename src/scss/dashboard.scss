@@ -1,0 +1,14 @@
+body{background: #e9e3d4;}
+.row{display: flex;flex-wrap: nowrap;}
+.menu{width: 16%;height: 100vh;background: #233775;color: #fff;
+	.headTitle{text-align: center;font-size: 25px;padding: 20px 0;;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+	.list{
+		padding: 15px 20px;cursor: pointer;
+		.icon{width: 30px;height: 30px;margin-right: 10px;}
+		.name{text-align: center;width: 150px;}
+	}
+	.choosed{background: #465c8f;color: #3ca6ff;}
+}
+.list:hover{background: #647ba5;color: #3ca6ff;}
+.logout{position: fixed;bottom: 5vh;left:5%;text-align: center;padding: 2px 10px;background: #667da6;border-radius: 30px;}
+.components{width: 83%;margin-left: 1%;}
