@@ -1,0 +1,22 @@
+.top{width: 99%;background: #fff;border-radius: 15px;height: 250px;margin: 15px 0;padding: 10px 2%;
+	.title{color: #34477f;font-size: 20px;font-weight: bold;margin-left: 10px;}
+	.total{margin:-20px 0 10px 10px;}
+	.card{width: 23%;margin: 10px 1%;background: linear-gradient(to right,#667da6,#233775);padding: 15px 2%;color:#fff;border-radius: 15px;
+		.icon{width: 40px;height: 40px;}
+		.money{font-size: 20px;font-weight: bold;}
+		.compare{color: #c7b284}
+	}
+}
+.topProducts{width: 49%;background: #fff;border-radius: 15px;padding: 10px 2%;height: 420px;
+	.title{color: #34477f;font-size: 20px;font-weight: bold;margin-left: 10px;}
+	.color{color: #224da9;}
+	.table{border-bottom: 1px solid #ddd;padding-bottom: 10px;}
+	.value{background: #4896c4;position: absolute;height: 5px;border-radius: 10px;width:50px;left: 38%;z-index: 3;margin-top: 10px;}
+	.percent{width:100px;height: 5px;background: #eee;border-radius: 10px;left: 38%;position: absolute;margin-top: 10px;}
+	.tableContent{width: 25%;padding-left: 10px;}
+	.Sales{background: #224da9;color: #fff;padding: 2px 10px;border-radius: 5px;margin-left: 10px;}
+}
+.echarts{width: 47%;background: #fff;border-radius: 15px;padding: 10px 2%;margin: 0 1%;height: 420px;
+	.title{color: #34477f;font-size: 20px;font-weight: bold;margin-left: 10px;position: absolute;}
+}
+.row{display: flex;flex-wrap: nowrap;}
