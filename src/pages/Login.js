@@ -1,6 +1,6 @@
 import bgImage from "../assets/background.png";
 import logoImage from "../assets/logo.png";
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import "../scss/login.scss";
 
@@ -34,7 +34,7 @@ const styles = {
     borderRadius: "10px"
   },
   ".mainLogo": { width: "200px", margin: "40px auto 0px" },
-  ".welcome": { color: "#F9F5EB" },
+  ".welcome": { color: "#607eaa" },
   ".field": { borderRadius: "10px" }
 }
 
@@ -59,8 +59,17 @@ function App() {
 
       <div className="hero-head" style={styles['.buttonMarigin']}>
         <div className="login-signup-buttons">
-          <button className="button is-primary is-rounded has-text-weight-bold px-5 py-5" style={styles['.loginButton']}>login</button>
-          <button className="button is-link is-rounded has-text-weight-bold py-5" style={styles['.signupButton']}>signup</button>
+          <a href="/login">
+            <button className="button is-primary is-rounded has-text-weight-bold px-5 py-5" style={styles['.loginButton']}>login</button>
+          </a>
+
+
+          <a href="/register">
+            <button className="button is-link is-rounded has-text-weight-bold py-5" style={styles['.signupButton']}>
+              signup
+            </button>
+          </a>
+
         </div>
       </div>
 
