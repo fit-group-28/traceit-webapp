@@ -25,7 +25,7 @@ const Profile = () => {
         <Loading loading={loading}>
             <Navbar />
             <figure className="image is-128x128 avatar">
-                <img className="is-rounded" src={avatar} />
+                <img className="is-rounded" src={avatar} alt="avatar" />
             </figure>
             <section className="hero is-primary">
                 <div className="hero-body">

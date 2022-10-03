@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import "../scss/account.scss";
+import AccountService from "../services/accountService";
 
 function SignUpForm() {
     const [email, setEmail] = useState("")
@@ -15,24 +15,22 @@ function SignUpForm() {
         return re.test(email);
     }
 
-    const handleRegister = (e) => {
+    const handleRegister = async (e) => {
         e.preventDefault()
-        var request = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username, password, email })
-        }
-        fetch('/account/register', request)
-            .then(response => {
-                console.log(response)
-                if (response.status === 200) {
-                    setisSuccess(true)
+        try {
+            await AccountService.signup(email, username, password).then(
+                () => {
                     setMsg("Account Created Successfully")
-                }
-                else {
+                    setisSuccess(true)
+                },
+                (error) => {
                     setMsg("Account Creation Failed")
                 }
-            })
+            )
+        }
+        catch (err) {
+            console.log(err)
+        }
     }
 
     return (
