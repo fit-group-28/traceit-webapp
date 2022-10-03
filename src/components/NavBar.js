@@ -1,53 +1,61 @@
+import { Link, useNavigate } from 'react-router-dom';
 import logoImage from "../assets/logo.png";
 import * as AiIcons from "react-icons/ai";
 
-// const styles = {
-//     ".logo": { padding: "0", margin: "-10" },
-// }
+const getIsLogin = () => {
+    const isLogin = localStorage.getItem("user");
+    return isLogin !== null;
+}
 
-function Navbar() {
+export default function Navbar() {
+    const navigate = useNavigate();
+    const isLogin = getIsLogin();
+
     return (
-        <nav class="navbar is-white">
-            <div class="navbar-brand mx-6">
-                <a class="navbar-item" href="/">
+        <nav className="navbar is-white">
+            <div className="navbar-brand mx-6">
+                <Link className="navbar-item" to="/">
                     <img src={logoImage} width="50" alt="TraceIt Logo" />
-                </a>
+                </Link>
             </div>
 
-            <div class="navbar-menu">
-                <div class="navbar-start" >
-                    <a class="navbar-item mr-5" href="/">
-                        Home
-                    </a>
-                    <a class="navbar-item mr-5" href="/dashboard">
-                        Dashboard
-                    </a>
-                    <div class="navbar-item mx-5 has-dropdown is-hoverable">
-                        <div class="navbar-link">
-                            User
-                        </div>
-                        <div class="navbar-dropdown is-boxed">
-                            <a class="navbar-item" href="/login">
-                                Login
-                            </a>
-                            <a class="navbar-item" href="/register">
-                                Sign Up
-                            </a>
-                        </div>
-                    </div>
+            <div className="navbar-menu">
+                <div className="navbar-start" >
+                    <Link className="navbar-item mr-5" to="/">Home</Link>
+                    <Link className="navbar-item mr-5" to="/dashboard">Dashboard</Link>
+                    <Link className="navbar-item mr-5" to="/report">Report</Link>
                 </div>
 
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <a class="button is-primary" href="/">
-                            {/* USER INFO DISPLAY PAGE */}
-                            <AiIcons.AiOutlineUser />
-                        </a>
+                <div className="navbar-end">
+                    <div className="navbar-item has-dropdown is-hoverable my-2 mx-6">
+                        <div className="control">
+                            <div className="button is-primary">
+                                <AiIcons.AiOutlineUser />
+                                <span>Account</span>
+                            </div>
+                        </div>
+
+                        <div className="navbar-dropdown is-right">
+                            {isLogin ? <div>
+                                <Link className="navbar-item" to="/profile">Profile</Link>
+                                <hr className="navbar-divider" />
+                                {/* to log out, clear local token */}
+                                <Link className="navbar-item" to="/" onClick={() => {
+                                    localStorage.removeItem("user");
+                                    navigate("/");
+                                }}>
+                                    Log out
+                                </Link>
+                            </div>
+                                : <div>
+                                    <Link className="navbar-item" to="/account/login">Login</Link>
+                                    <Link className="navbar-item" to="/account/register">Signup</Link>
+                                </div>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
         </nav >
     )
 }
-
-export default Navbar

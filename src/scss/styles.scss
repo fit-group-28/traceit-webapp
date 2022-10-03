@@ -1,6 +1,10 @@
 @charset "utf-8";
 @import './colors.scss';
 
+body {
+    background-color: $app-beige-light;
+}
+
 // Update Bulma's global variables
 $primary: $app-blue;
 $link: $app-beige;
