@@ -31,7 +31,7 @@ const login = (username, password) => {
 
 const accountService = {
     signup,
-    login,
+    login
 };
 
 export default accountService
