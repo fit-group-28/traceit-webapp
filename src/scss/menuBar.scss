@@ -1,0 +1,27 @@
+@import './colors.scss';
+
+$menu-item-hover-background-color: $app-blue-light;
+@import "bulma/sass/components/menu.sass";
+
+.menu-bars {
+    // margin-left: 1rem;
+    // margin-right: 1rem;
+    // font-size: 2rem;
+    text-align: center;
+    // background: none;
+}
+
+.menu {
+    position: fixed;
+    left: -100%;
+    transition: 350ms;
+}
+
+.menu.active {
+    left: 0;
+    transition: 350ms;
+}
+
+span {
+    margin-left: 16px;
+}

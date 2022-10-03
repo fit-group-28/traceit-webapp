@@ -1,25 +1,22 @@
 import MenuBar from "../components/MenuBar";
 import NavBar from "../components/NavBar";
 
-function Landing() {
-    const styles = {
-        ".background": { backgroundColor: "#F9F5EB" }
-    }
+export default function Landing() {
 
     return (
-        <div className="full-height" style={styles['.background']}>
+        <div>
 
             <div className="navBar">
                 <NavBar />
             </div>
 
-            {/* <div className="menuBar">
+            <div className="menuBar">
                 <MenuBar />
-            </div> */}
+            </div>
 
-            <section className="hero is-fullheight-with-navbar">
+            <section className="hero is-fullheight">
                 <div className="hero-body">
-                    <p class="title is-size-1">
+                    <p className="title is-size-1">
                         TraceIt - Group 28
                     </p>
                 </div>
@@ -28,5 +25,3 @@ function Landing() {
 
     )
 }
-
-export default Landing;

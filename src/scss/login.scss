@@ -1,8 +1,0 @@
-@import "bulma/sass/utilities/_all.sass";
-$breakpoint: 1280px;
-
-.login-signup-buttons {
-    @include until($breakpoint) {
-        display: none;
-    }
-}
