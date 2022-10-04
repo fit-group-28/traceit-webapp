@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.2.1",
     "axios": "^0.27.2",
     "bulma": "^0.9.4",
+    "bulma-pagination-react": "^0.1.1",
     "echarts": "^5.3.3",
     "echarts-for-react": "^3.0.2",
     "http-proxy-middleware": "^2.0.6",

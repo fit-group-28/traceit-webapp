@@ -2,36 +2,36 @@ import "../../scss/orders.scss";
 import SeacrhIcon from "../../assets/background.png";
 const Sales = () => {
     return <div>
-		<div class="orderList">
-			<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-			<input class="input" placeholder="Search" />
+		<div className="orderList">
+			<img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+			<input className="input" placeholder="Search" />
 			
-			<div class="row table">
-				<div class="tableContent">Product</div>
-				<div class="tableContent">Qnt</div>
-				<div class="tableContent">Price</div>
+			<div className="row table">
+				<div className="tableContent">Product</div>
+				<div className="tableContent">Qnt</div>
+				<div className="tableContent">Price</div>
 			</div>
-			<div class="row table">
-				<div class="tableContent color">Product 1</div>
-				<div class="tableContent color">1</div>
-				<div class="tableContent color">$12</div>
+			<div className="row table">
+				<div className="tableContent color">Product 1</div>
+				<div className="tableContent color">1</div>
+				<div className="tableContent color">$12</div>
 			</div>
-			<div class="row table">
-				<div class="tableContent color">Product 2</div>
-				<div class="tableContent color">2</div>
-				<div class="tableContent color">$12</div>
+			<div className="row table">
+				<div className="tableContent color">Product 2</div>
+				<div className="tableContent color">2</div>
+				<div className="tableContent color">$12</div>
 			</div>
-			<div class="row table">
-				<div class="tableContent color">Product 3</div>
-				<div class="tableContent color">3</div>
-				<div class="tableContent color">$12</div>
+			<div className="row table">
+				<div className="tableContent color">Product 3</div>
+				<div className="tableContent color">3</div>
+				<div className="tableContent color">$12</div>
 			</div>
-			<div class="row table">
-				<div class="tableContent color">Product 4</div>
-				<div class="tableContent color">4</div>
-				<div class="tableContent color">$12</div>
+			<div className="row table">
+				<div className="tableContent color">Product 4</div>
+				<div className="tableContent color">4</div>
+				<div className="tableContent color">$12</div>
 			</div>
-			<div class="totalPrice">Total：<span>$48</span></div>
+			<div className="totalPrice">Total：<span>$48</span></div>
 		</div>
 	</div>;
 };

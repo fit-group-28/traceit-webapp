@@ -1,6 +1,6 @@
 const Sales = () => {
     return <div>
-			<div class="top">
+			<div className="top">
 				<div></div>
 			</div>
 		</div>;

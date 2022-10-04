@@ -51,7 +51,7 @@ function SignUpForm() {
                 <div className="control">
                     <input onChange={e => setUsername(e.target.value)} className="input field" type="text" placeholder="e.g. cedliang" />
                 </div>
-                {/* <p class="help is-success">This username is available</p> */}
+                {/* <p className="help is-success">This username is available</p> */}
             </div>
 
             {/* password field */}
