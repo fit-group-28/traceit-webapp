@@ -1,4 +1,5 @@
 import "../scss/dashboard.scss";
+import { useState } from "react";
 import Icon from "../assets/icon.png";
 import Home from "./DashboardCompontens/home";
 import Sales from "./DashboardCompontens/sales";
@@ -6,75 +7,62 @@ import Orders from "./DashboardCompontens/orders";
 import Stock from "./DashboardCompontens/stock";
 import SupplyChain from "./DashboardCompontens/supplyChain";
 import Supplier from "./DashboardCompontens/supplier";
-
-import React, {
-	Component
-} from 'react'
-class Dashboard extends Component {
-	constructor(){
-		super();
-		this.state = {menu:'Home'};
-		this.preventPop = this.preventPop.bind(this)
+const Dashboard = ()=>{
+	const [menu, setMenu] = useState('Home')
+	const preventPop = (name)=>{
+		setMenu(name)
 	}
-	preventPop(name){
-		this.setState({
-		    menu:name
-		});
-	}
-
-	render() {
 		return (
 			<div className="row">
 				<div className="menu">
 					<div className="headTitle">DashBoard</div>
-					<div className={this.state.menu === 'Home'?'row list choosed':'row list'} onClick={this.preventPop.bind(this,'Home')}>
+					<div className={menu === 'Home'?'row list choosed':'row list'} onClick={()=>preventPop('Home')}>
 						<img className="icon" src={Icon} alt="TraceIt Logo"></img>
 						<div className="name">Home</div>
 					</div>
-					<div className={this.state.menu === 'Supply Chain'?'row list choosed':'row list'} onClick={this.preventPop.bind(this,'Supply Chain')}>
+					<div className={menu === 'Supply Chain'?'row list choosed':'row list'} onClick={()=>preventPop('Supply Chain')}>
 						<img className="icon" src={Icon} alt="TraceIt Logo"></img>
 						<div className="name">SupplyChain</div>
 					</div>
-					<div className={this.state.menu === 'Supplier'?'row list choosed':'row list'} onClick={this.preventPop.bind(this,'Supplier')}>
+					<div className={menu === 'Supplier'?'row list choosed':'row list'} onClick={()=>preventPop('Supplier')}>
 						<img className="icon" src={Icon} alt="TraceIt Logo"></img>
 						<div className="name">Supplier</div>
 					</div>
-					<div className={this.state.menu === 'Orders'?'row list choosed':'row list'} onClick={this.preventPop.bind(this,'Orders')}>
+					<div className={menu === 'Orders'?'row list choosed':'row list'} onClick={()=>preventPop('Orders')}>
 						<img className="icon" src={Icon} alt="TraceIt Logo"></img>
 						<div className="name">Orders</div>
 					</div>
-					<div className={this.state.menu === 'Sales'?'row list choosed':'row list'} onClick={this.preventPop.bind(this,'Sales')}>
+					<div className={menu === 'Sales'?'row list choosed':'row list'} onClick={()=>preventPop('Sales')}>
 						<img className="icon" src={Icon} alt="TraceIt Logo"></img>
 						<div className="name">Sales</div>
 					</div>
-					<div className={this.state.menu === 'Stock'?'row list choosed':'row list'} onClick={this.preventPop.bind(this,'Stock')}>
+					<div className={menu === 'Stock'?'row list choosed':'row list'} onClick={()=>preventPop('Stock')}>
 						<img className="icon" src={Icon} alt="TraceIt Logo"></img>
 						<div className="name">Product</div>
 					</div>
 					<div className="logout">Logout</div>
 				</div>
 				<div className="components">
-					{this.state.menu === 'Home'&&
-				        <Home setCurrentPage={this.preventPop}></Home>
+					{menu === 'Home'&&
+				        <Home setCurrentPage={preventPop}></Home>
 				    }
-					{this.state.menu === 'Sales'&&
+					{menu === 'Sales'&&
 					    <Sales></Sales>
 					}
-					{this.state.menu === 'Orders'&&
+					{menu === 'Orders'&&
 					    <Orders></Orders>
 					}
-					{this.state.menu === 'Supply Chain'&&
+					{menu === 'Supply Chain'&&
 					    <SupplyChain></SupplyChain>
 					}
-					{this.state.menu === 'Stock'&&
+					{menu === 'Stock'&&
 					    <Stock></Stock>
-					}{this.state.menu === 'Supplier'&&
+					}{menu === 'Supplier'&&
 					<Supplier></Supplier>
 				}
 				</div>
 			
 			</div>
 		);
-	}
 }
 export default Dashboard;
