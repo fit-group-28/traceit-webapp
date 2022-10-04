@@ -40,7 +40,7 @@ export const MenuBarData = [
     ,
 
     {
-        title: 'Product',
+        title: 'Product Sales',
         path: '/',
         icon: <ImIcons.ImTruck />,
         cName: 'nav-text',

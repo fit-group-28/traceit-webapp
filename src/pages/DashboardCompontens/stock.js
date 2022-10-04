@@ -6,7 +6,7 @@ import cartImage from "../../assets/icons8-add-to-cart-64.png";
 const Stock = () => {
 	const stockData = [
 		{
-			productName: "Product 1",
+			productName: "Potato",
 			qnt: 1,
 			price: "$12",
 			supplier: "supplier1",
@@ -15,7 +15,7 @@ const Stock = () => {
 			hotSale: "yes",
 		},
 		{
-			productName: "Product 2",
+			productName: "Tomato",
 			qnt: 1,
 			price: "$12",
 			supplier: "supplier2",
@@ -24,7 +24,7 @@ const Stock = () => {
 			hotSale: "yes",
 		},
 		{
-			productName: "Product 3",
+			productName: "Apple",
 			qnt: 1,
 			price: "$12",
 			supplier: "supplier2",
@@ -32,7 +32,7 @@ const Stock = () => {
 			lowStock: "yes",
 			hotSale: "yes",
 		}, {
-			productName: "Product 4",
+			productName: "Banana",
 			qnt: 1,
 			price: "$12",
 			supplier: "supplier1",
@@ -348,7 +348,7 @@ const Stock = () => {
 						<option value="no">Hot Sale - No</option>
 					</select>
 				</div>
-				<div className="title">Product List</div>
+				<div className="title">Item List</div>
 				<table className="table is-bordered is-striped is-hoverable is-fullwidth">
 					<thead>
 						<tr>
