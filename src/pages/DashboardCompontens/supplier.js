@@ -437,7 +437,7 @@ const Supplier = () => {
                 />
             </div>
             <div className="supplyChain">
-                <div className="title">Saless</div>
+                <div className="title">Sales</div>
                 <table className="table is-bordered is-striped is-hoverable is-fullwidth">
                     <thead>
                         <tr>
