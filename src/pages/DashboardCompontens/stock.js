@@ -210,6 +210,7 @@ const Stock = () => {
 		},
 	];
 	const [myOrders, setMyOrders] = useState([]);
+	const [showModal, setShowModal] = useState(false);
 	const [currentOrderPage, setCurrentOrderPage] = useState(1);
 	const [searchWord, setSearchWord] = useState();
 	const [size, setSize] = useState(5);
@@ -308,7 +309,7 @@ const Stock = () => {
 				});
 				setFilterStockData(fd);
 			}
-		}else{
+		} else {
 			const fd = stockData.filter((item) => {
 				return item.supplier.toLowerCase() === supplierFilter;
 			});
@@ -323,9 +324,47 @@ const Stock = () => {
 			}
 		}
 	}
+	const saveSales = () => {
+		setShowModal(false)
+		setMyOrders([])
+	}
 	return (
 		<div>
+			{showModal && <div className="modal" style={{ display: "block" }}>
+				<div className="modal-background"></div>
+				<div className="modal-card">
+					<header className="modal-card-head">
+						<p className="modal-card-title">Create Sale</p>
+						<button className="delete" aria-label="close" onClick={()=>setShowModal(false)}></button>
+					</header>
+					<section className="modal-card-body">
+						<div class="field">
+							<label class="label">Name</label>
+							<div class="control">
+								<input class="input" type="text" placeholder="e.g Apple" />
+							</div>
+						</div>
+						<div class="field">
+							<label class="label">Description</label>
+							<div class="control">
+								<textarea class="textarea" placeholder="Description"></textarea>
+							</div>
+						</div>
+						<div class="field">
+							<label class="label">Price</label>
+							<div class="control">
+								<input class="input" type="price" placeholder="e.g. 100" />
+							</div>
+						</div>
+					</section>
+					<footer className="modal-card-foot">
+						<button className="button is-success" onClick={()=>saveSales()}>Save changes</button>
+						<button className="button" onClick={()=>setShowModal(false)}>Cancel</button>
+					</footer>
+				</div>
+			</div>}
 			<div className="orderList box" style={{ overflowY: "auto" }}>
+
 				<img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
 				<input
 					value={searchWord}
@@ -408,12 +447,14 @@ const Stock = () => {
 
 						</tbody>
 					</table>
+					<button className="button is-primary" onClick={() => setShowModal(true)}>Create</button>
 					<Pagination
 						pages={Math.ceil(myOrders.length / size)}
 						currentPage={currentOrderPage}
 						onChange={(page) => setCurrentOrderPage(page)}
 					/>
 				</div>
+
 			</div>
 
 		</div>

@@ -46,9 +46,4 @@ export const MenuBarData = [
         cName: 'nav-text',
         id: "Stock"
     }
-
-
-
-  
-
 ]
