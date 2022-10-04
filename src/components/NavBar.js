@@ -1,8 +1,5 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import logoImage from "../assets/logo.png";
-import * as AiIcons from "react-icons/ai";
-import { useEffect } from 'react';
-import "../scss/navbar.scss"
 
 const getIsLogin = () => {
     const isLogin = localStorage.getItem("user");
@@ -25,19 +22,22 @@ const getIsLogin = () => {
 
             <div className="navbar-menu">
                 <div className="navbar-start" >
-                    <Link className={params.pathname==="/" ?"selected navbar-item mr-5" : "navbar-item mr-5"} to="/">Home</Link>
-                    <Link className={params.pathname==="/dashboard" ?"selected navbar-item mr-5" : "navbar-item mr-5"} to="/dashboard">Dashboard</Link>
-                    <Link className={params.pathname==="/report" ?"selected navbar-item mr-5" : "navbar-item mr-5"} to="/report">Report</Link>
+                    <Link className="navbar-item mr-5" to="/">Home</Link>
+                    <Link className="navbar-item mr-5" to="/dashboard">Dashboard</Link>
+                    <Link className="navbar-item mr-5" to="/order">Orders</Link>
+                    <Link className="navbar-item mr-5" to="/inventory">Inventory</Link>
+                    <Link className="navbar-item mr-5" to="/supplier">Suppliers</Link>
+
                 </div>
 
                 <div className="navbar-end">
                     <div className="navbar-item has-dropdown is-hoverable my-2 mx-6">
-                        <div className="control">
-                            <div className="button is-primary">
-                                <AiIcons.AiOutlineUser />
-                                <span>Account</span>
-                            </div>
-                        </div>
+                        <button className="button is-primary">
+                            <span className="icon">
+                                <i className="fas fa-user"></i>
+                            </span>
+                            <span>Account</span>
+                        </button>
 
                         <div className="navbar-dropdown is-right">
                             {isLogin ? <div>

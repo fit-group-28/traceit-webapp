@@ -13,7 +13,7 @@ request.interceptors.request.use((config) => {
 })
 
 request.interceptors.response.use((response) => {
-    return response
+    return response.data
 }, err => {
     // if not authorised, redirect to login
     if (err.response.status === 401) {
@@ -21,5 +21,6 @@ request.interceptors.response.use((response) => {
     }
     return Promise.reject(err)
 })
+
 
 export default request
