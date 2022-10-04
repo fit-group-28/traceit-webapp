@@ -2,35 +2,47 @@ import "../../scss/orders.scss";
 import SeacrhIcon from "../../assets/background.png";
 const Sales = () => {
     return <div>
-		<div className="orderList">
+		<div className="orderList box">
 			<img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-			<input className="input" placeholder="Search" />
+			<input className="input is-primary" type="text" placeholder="Search By Product" />
+			<div className="title">Stock List</div>
+			<table className="table is-bordered is-striped is-hoverable is-fullwidth">
+			    <thead>
+			        <tr>
+						<th>Product</th>
+						<th>Qnt</th>
+						<th>Price</th>
+					</tr>
+			    </thead>
+				<tbody>
+					<tr>
+						<td>Product 1</td>
+						<td>1</td>
+						<td>$12</td>
+					</tr>
+					<tr>
+						<td>Product 2</td>
+						<td>2</td>
+						<td>$12</td>
+					</tr>
+					<tr>
+						<td>Product 3</td>
+						<td>3</td>
+						<td>$12</td>
+					</tr>
+					<tr>
+						<td>Product 4</td>
+						<td>4</td>
+						<td>$12</td>
+					</tr>
+					<tr>
+						<td>Product 5</td>
+						<td>5</td>
+						<td>$12</td>
+					</tr>
+				</tbody>
+			</table>
 			
-			<div className="row table">
-				<div className="tableContent">Product</div>
-				<div className="tableContent">Qnt</div>
-				<div className="tableContent">Price</div>
-			</div>
-			<div className="row table">
-				<div className="tableContent color">Product 1</div>
-				<div className="tableContent color">1</div>
-				<div className="tableContent color">$12</div>
-			</div>
-			<div className="row table">
-				<div className="tableContent color">Product 2</div>
-				<div className="tableContent color">2</div>
-				<div className="tableContent color">$12</div>
-			</div>
-			<div className="row table">
-				<div className="tableContent color">Product 3</div>
-				<div className="tableContent color">3</div>
-				<div className="tableContent color">$12</div>
-			</div>
-			<div className="row table">
-				<div className="tableContent color">Product 4</div>
-				<div className="tableContent color">4</div>
-				<div className="tableContent color">$12</div>
-			</div>
 			<div className="totalPrice">Total：<span>$48</span></div>
 		</div>
 	</div>;
