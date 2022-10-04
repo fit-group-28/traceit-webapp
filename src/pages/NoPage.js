@@ -13,7 +13,7 @@ export default function NoPage() {
                             We can't seem to find the page you're looking for.
                         </p>
                         <br />
-                        <Link class="button is-link has-text-weight-medium" to="/">Go to Home</Link>
+                        <Link className="button is-link has-text-weight-medium" to="/">Go to Home</Link>
                     </div>
                 </div>
             </section>

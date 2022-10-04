@@ -34,7 +34,7 @@ const Profile = () => {
                             Hello
                         </p>
                         <p className="subtitle">
-                            {profile && profile.data.username}
+                            {profile && profile.username}
                         </p>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ const Profile = () => {
                     <div className="field-body">
                         <div className="field">
                             <p className="control is-expanded">
-                                <input readOnly className="input" type="text" value={profile ? profile.data.uid : ''} />
+                                <input readOnly className="input" type="text" value={profile ? profile.uid : ''} />
                             </p>
                         </div>
                     </div>
@@ -62,7 +62,7 @@ const Profile = () => {
                     <div className="field-body">
                         <div className="field">
                             <p className="control is-expanded">
-                                <input readOnly className="input" type="text" value={profile ? profile.data.username : ''} />
+                                <input readOnly className="input" type="text" value={profile ? profile.username : ''} />
                             </p>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ const Profile = () => {
                     <div className="field-body">
                         <div className="field">
                             <p className="control is-expanded">
-                                <input readOnly className="input" type="text" value={profile ? profile.data.email : ''} />
+                                <input readOnly className="input" type="text" value={profile ? profile.email : ''} />
                             </p>
                         </div>
                     </div>
