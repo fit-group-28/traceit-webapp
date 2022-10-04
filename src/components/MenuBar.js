@@ -8,7 +8,7 @@ import { MenuBarData } from "./MenuBarData";
 const MenuBar = (props) =>{
     console.log(props.currentOption)
     return (
-        <div>
+        <div className="menu-page">
             {/* <div className="menuBar">
                 <Link to="#" className="is-large">
                     <ImIcons.ImMenu onClick={showMenuBar} />
