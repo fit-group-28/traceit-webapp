@@ -2959,6 +2959,19 @@ builtin-modules@^3.1.0:
   resolved "https://registry.npmjs.org/builtin-modules/-/builtin-modules-3.3.0.tgz"
   integrity sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==
 
+bulma-pagination-react@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/bulma-pagination-react/-/bulma-pagination-react-0.1.1.tgz#75b1a40e59a72e992e86b53876a6e52ebc0463bf"
+  integrity sha512-JFubeZYjI1D+Jx8WH6BUvVOfeNmI/tmzvE3dmBDEh3FnS9JRi5AMFKq335dAFpPa6sP2RPSywD9Agz8NHfaEGw==
+  dependencies:
+    bulma "^0.7.2"
+    prop-types "^15.6.2"
+
+bulma@^0.7.2:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.5.tgz#35066c37f82c088b68f94450be758fc00a967208"
+  integrity sha512-cX98TIn0I6sKba/DhW0FBjtaDpxTelU166pf7ICXpCCuplHWyu6C9LYZmL5PEsnePIeJaiorsTEzzNk3Tsm1hw==
+
 bulma@^0.9.4:
   version "0.9.4"
   resolved "https://registry.npmjs.org/bulma/-/bulma-0.9.4.tgz"
@@ -7417,9 +7430,9 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.8.1:
+prop-types@^15.6.2, prop-types@^15.8.1:
   version "15.8.1"
-  resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
   dependencies:
     loose-envify "^1.4.0"

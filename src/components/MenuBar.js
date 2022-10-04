@@ -1,11 +1,8 @@
 import "../scss/menuBar.scss";
-import * as ImIcons from "react-icons/im";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 import { MenuBarData } from "./MenuBarData";
 
 
-const MenuBar = (props) =>{
+const MenuBar = (props) => {
     console.log(props.currentOption)
     return (
         <div className="menu-page">
@@ -30,10 +27,10 @@ const MenuBar = (props) =>{
                     {/* Map the menubar items in menubardata */}
                     {MenuBarData.map((item, index) => {
                         return (
-                            <li key={index} className={props.currentOption === item.id ? item.cName + " choosed":item.cName}>
-                                <a onClick={()=>props.preventPop(item.id)}>
+                            <li key={index} className={props.currentOption === item.id ? item.cName + " choosed" : item.cName}>
+                                <a onClick={() => props.preventPop(item.id)}>
                                     {item.icon}
-                                    <span>{item.title}</span>
+                                    <span className="menubar-span">{item.title}</span>
                                 </a>
                             </li>
                         )

@@ -1,12 +1,12 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import logoImage from "../assets/logo.png";
+import logoSVG from "../assets/logoSVG.png";
 
 const getIsLogin = () => {
     const isLogin = localStorage.getItem("user");
     return isLogin !== null;
 }
 
- const Navbar = (props) => {
+const Navbar = (props) => {
     const navigate = useNavigate();
     const isLogin = getIsLogin();
     let params = useLocation()
@@ -16,7 +16,7 @@ const getIsLogin = () => {
         <nav className="navbar is-white">
             <div className="navbar-brand mx-6">
                 <Link className="navbar-item" to="/">
-                    <img src={logoImage} width="50" alt="TraceIt Logo" />
+                    <img src={logoSVG} width="50" alt="TraceIt Logo" />
                 </Link>
             </div>
 

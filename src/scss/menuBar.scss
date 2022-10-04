@@ -22,15 +22,16 @@ $menu-item-hover-background-color: $app-blue-light;
     transition: 350ms;
 }
 
-.menu-page{
-.choosed{
-//     background-color: #00d1b2 !important;
-// color: #fff !important;
-background: #485fc7 !important;
-// color: #3ca6ff !important;
+.menu-page {
+    .choosed {
+        background: #485fc7 !important;
+    }
+
+    .menu-list a {
+        color: #fff !important;
+    }
 }
 
-.menu-list a {
-    color: #fff !important;
-}
+.menubar-span {
+    margin-left: 16px;
 }
