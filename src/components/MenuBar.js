@@ -5,39 +5,36 @@ import { useState } from "react";
 import { MenuBarData } from "./MenuBarData";
 
 
-function MenuBar() {
-    const [menuBar, setMenuBar] = useState(false);
-
-    const showMenuBar = () => setMenuBar(!menuBar);
+const MenuBar = (props) =>{
+    console.log(props.currentOption)
     return (
         <div>
-
             {/* <div className="menuBar">
                 <Link to="#" className="is-large">
                     <ImIcons.ImMenu onClick={showMenuBar} />
                 </Link>
             </div> */}
 
-            <span className="icon">
+            {/* <span className="icon">
                 <ImIcons.ImMenu onClick={showMenuBar} />
-            </span>
+            </span> */}
 
-            <aside className={menuBar ? "menu active" : "menu"}>
+            <aside className={"menu active"}>
                 <ul className="menu-list">
-                    <li>
+                    {/* <li>
                         <Link to="#" className="menu-bars">
                             <ImIcons.ImCross onClick={showMenuBar} />
                         </Link>
-                    </li>
+                    </li> */}
 
                     {/* Map the menubar items in menubardata */}
                     {MenuBarData.map((item, index) => {
                         return (
-                            <li key={index} className={item.cName}>
-                                <Link to={item.path}>
+                            <li key={index} className={props.currentOption === item.id ? item.cName + " choosed":item.cName}>
+                                <a onClick={()=>props.preventPop(item.id)}>
                                     {item.icon}
                                     <span>{item.title}</span>
-                                </Link>
+                                </a>
                             </li>
                         )
                     })

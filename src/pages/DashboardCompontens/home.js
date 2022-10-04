@@ -25,21 +25,6 @@ function Home(props) {
     setCurrentRange(selection)
   }
   return (
-    <div>
-      <div className="head row">
-        <img className="icon" src={Icon} alt="TraceIt Logo"></img>
-        <img className="searchIcon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-        <input className="input" placeholder="Search" />
-        <div className="headMenu">Dashboard</div>
-        <div className="headMenu">Report</div>
-        <div className="headMenu">Help</div>
-        <img className="icon" src={Icon} alt="TraceIt Logo"></img>
-        <div className="uesrInfo">
-          <div>Group28</div>
-          <div className="role">Admin</div>
-        </div>
-        <img className="icon" src={Icon} alt="TraceIt Logo"></img>
-      </div>
       <div className="container">
         <div className="row">
           <div className="topLeft">
@@ -182,7 +167,6 @@ function Home(props) {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

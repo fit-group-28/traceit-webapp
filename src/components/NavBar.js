@@ -1,15 +1,19 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import logoImage from "../assets/logo.png";
 import * as AiIcons from "react-icons/ai";
+import { useEffect } from 'react';
+import "../scss/navbar.scss"
 
 const getIsLogin = () => {
     const isLogin = localStorage.getItem("user");
     return isLogin !== null;
 }
 
-export default function Navbar() {
+ const Navbar = (props) => {
     const navigate = useNavigate();
     const isLogin = getIsLogin();
+    let params = useLocation()
+    console.log(params)
 
     return (
         <nav className="navbar is-white">
@@ -21,9 +25,9 @@ export default function Navbar() {
 
             <div className="navbar-menu">
                 <div className="navbar-start" >
-                    <Link className="navbar-item mr-5" to="/">Home</Link>
-                    <Link className="navbar-item mr-5" to="/dashboard">Dashboard</Link>
-                    <Link className="navbar-item mr-5" to="/report">Report</Link>
+                    <Link className={params.pathname==="/" ?"selected navbar-item mr-5" : "navbar-item mr-5"} to="/">Home</Link>
+                    <Link className={params.pathname==="/dashboard" ?"selected navbar-item mr-5" : "navbar-item mr-5"} to="/dashboard">Dashboard</Link>
+                    <Link className={params.pathname==="/report" ?"selected navbar-item mr-5" : "navbar-item mr-5"} to="/report">Report</Link>
                 </div>
 
                 <div className="navbar-end">
@@ -59,3 +63,5 @@ export default function Navbar() {
         </nav >
     )
 }
+
+export default Navbar
