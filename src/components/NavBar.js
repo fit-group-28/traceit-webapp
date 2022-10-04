@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import logoImage from "../assets/logo.png";
 
 const getIsLogin = () => {
@@ -6,9 +6,11 @@ const getIsLogin = () => {
     return isLogin !== null;
 }
 
-export default function Navbar() {
+ const Navbar = (props) => {
     const navigate = useNavigate();
     const isLogin = getIsLogin();
+    let params = useLocation()
+    console.log(params)
 
     return (
         <nav className="navbar is-white">
@@ -25,6 +27,7 @@ export default function Navbar() {
                     <Link className="navbar-item mr-5" to="/order">Orders</Link>
                     <Link className="navbar-item mr-5" to="/inventory">Inventory</Link>
                     <Link className="navbar-item mr-5" to="/supplier">Suppliers</Link>
+
                 </div>
 
                 <div className="navbar-end">
@@ -60,3 +63,5 @@ export default function Navbar() {
         </nav >
     )
 }
+
+export default Navbar

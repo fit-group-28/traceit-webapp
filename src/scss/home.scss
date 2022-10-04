@@ -10,19 +10,7 @@
 }
 .topLeft{width: 47%;background: #fff;border-radius: 15px;height: 250px;
 	.name{width: 430px;text-align: center;color: #34477f;font-size: 20px;font-weight: bold;margin: 5px 0;}
-	.histogram{
-		.y-axis{position: absolute;
-			.scale{width: 60px;text-align: right;height: 40px;font-size: 10px;color: #999;}
-		}
-		.x-axis{position: absolute;margin: 180px 0 0 80px;
-			.scale{width: 65px;text-align: center;height: 40px;font-size: 10px;color: #999;line-height: 12px;}
-		}
-		.dataList{position: absolute;margin: 15px 0 0 80px ;height: 160px;
-			.data{display: flex;flex-direction: column-reverse;width: 45px;margin: 0 10px;
-				.top{width: 45px;height: 30px;background: #1f4aa9;margin: 0;border-top-left-radius: 5px;border-top-right-radius: 5px;}
-				.bottom{width: 45px;height: 50px;background: #5a72f6;margin: 0;}
-			}
-		}
+	.histogram{margin-top: -50px;
 	}
 	.totalData{background: #e9e3d4;color: #224da9;text-align: center;width: 140px;border-radius: 7px;margin: 25px 0;font-size: 12px;}
 	.money{font-weight: bold;font-size: 25px;}

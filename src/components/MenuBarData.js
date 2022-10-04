@@ -5,35 +5,45 @@ export const MenuBarData = [
         title: 'Home',
         path: '/',
         icon: <ImIcons.ImHome />,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        id: "Home"
     },
-
     {
-        title: 'Product',
+        title: 'Supply Chain',
         path: '/',
-        icon: <ImIcons.ImTruck />,
-        cName: 'nav-text'
+        icon: <ImIcons.ImOffice />,
+        cName: 'nav-text',
+        id: "Supply Chain"
     },
-
     {
-        title: 'Supplier',
+        title: 'Suppliers',
         path: '/',
         icon: <ImIcons.ImClipboard />,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        id: "Supplier"
     },
-
     {
-        title: 'Order',
+        title: 'Orders',
         path: '/',
         icon: <ImIcons.ImCoinDollar />,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        id: "Orders"
     },
 
     {
-        title: 'Inventory',
+        title: 'Sales',
         path: '/',
         icon: <ImIcons.ImStatsBars />,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        id: "Sales"
     }
+    ,
 
+    {
+        title: 'Product Sales',
+        path: '/',
+        icon: <ImIcons.ImTruck />,
+        cName: 'nav-text',
+        id: "Stock"
+    }
 ]

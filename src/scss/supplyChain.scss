@@ -1,0 +1,13 @@
+.supplyChainPage{
+	display: flex;flex-wrap: nowrap;width: 99%;border-radius: 15px;margin: 2vh 0;height: 96vh;padding: 0 1%;
+	.supplyChain{margin: 30px;
+		.title{color: #34477f;font-size: 20px;font-weight: bold;margin-bottom: 2vh;}
+		.totalPrice{text-align: right;
+			span{color: #34477f;font-size: 20px;font-weight: bold;}
+		}
+	}
+	.row{display: flex;flex-wrap: nowrap;}
+	.margin-bottom-10{
+		margin-bottom: 10px;
+	}
+}

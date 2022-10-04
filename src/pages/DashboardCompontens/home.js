@@ -1,195 +1,173 @@
 import "../../scss/home.scss";
+import { useState } from "react";
 import Icon from "../../assets/icon.png";
 import SeacrhIcon from "../../assets/background.png";
-const Home = () => {
-    return <div>
-		<div class="head row">
-			<img class="icon" src={Icon} alt="TraceIt Logo"></img>
-			<img class="searchIcon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-			<input class="input" placeholder="Search" />
-			<div class="headMenu">Dashboard</div>
-			<div class="headMenu">Report</div>
-			<div class="headMenu">Help</div>
-			<img class="icon" src={Icon} alt="TraceIt Logo"></img>
-			<div class="uesrInfo">
-				<div>Group28</div>
-				<div class="role">Admin</div>
-			</div>
-			<img class="icon" src={Icon} alt="TraceIt Logo"></img>
-		</div>
-		<div class="row">
-			<div class="topLeft">
-				<div class="row">
-					<div>
-						<div class="name">At a Glance</div>
-						<div class="histogram">
-							<div class="y-axis">
-								<div class="scale">40</div>
-								<div class="scale">30</div>
-								<div class="scale">20</div>
-								<div class="scale">10</div>
-								<div class="scale">0</div>
-							</div>
-							<div class="x-axis row">
-								<div class="scale">Social Media 1</div>
-								<div class="scale">Social Media 2</div>
-								<div class="scale">Social Media 3</div>
-								<div class="scale">Social Media 4</div>
-								<div class="scale">Social Media 5</div>
-							</div>
-							<div class="dataList row">
-								<div class="data">
-									<div class="bottom"></div>
-									<div class="top"></div>
-								</div>
-								<div class="data">
-									<div class="bottom"></div>
-									<div class="top"></div>
-								</div>
-								<div class="data">
-									<div class="bottom"></div>
-									<div class="top"></div>
-								</div>
-								<div class="data">
-									<div class="bottom"></div>
-									<div class="top"></div>
-								</div>
-								<div class="data">
-									<div class="bottom"></div>
-									<div class="top"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="totalData">
-							<div class="txt">Total Sales</div>
-							<div class="money">25,000</div>
-						</div>
-						<div class="totalData">
-							<div class="txt">Total Refund</div>
-							<div class="money">50</div>
-						</div>
-						<div class="totalData">
-							<div class="txt">Total Income</div>
-							<div class="money">75,000</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="topMid">
-				<div class="choosed module">Yearly</div>
-				<div class="module">Monthly</div>
-				<div class="module">Daily</div>
-			</div>
-			<div class="topRight">
-				<div class="name">Yearly</div>
-				<div class="row">
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-					<div class="order">Order 01</div>
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-				</div>
-				<div class="row">
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-					<div class="order">Order 02</div>
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-				</div>
-				<div class="row">
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-					<div class="order">Order 03</div>
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-				</div>
-				<div class="row">
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-					<div class="order">Order 04</div>
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-				</div>
-			</div>
-		</div>
-		<div class="row bottom">
-			<div class="width">
-				<div class="midLeft ">
-					<div class="row">
-						<div class="totalTxt">Total Sales</div>
-						<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-						<div class="money">1,632,400</div>
-					</div>
-					<div class="row">
-						<div class="totalTxt">Total Wasted</div>
-						<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-						<div class="money">801,366</div>
-					</div>
-					<div class="row">
-						<div class="totalTxt">Deleted Item</div>
-						<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-						<div class="money">23,884</div>
-					</div>
-				</div>
-				<div class="bottomLeft row">
-					<div class="name">Incoming Orders</div>
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-				</div>
-			</div>
-			<div class="bottomMid">
-				<div class="name">Suppliers</div>
-				<div class="row">
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-					<div class="txt">tom</div>
-				</div>
-				<div class="row">
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-					<div class="txt">tom</div>
-				</div>
-				<div class="row">
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-					<div class="txt">tom</div>
-				</div>
-				<div class="row">
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-					<div class="txt">tom</div>
-				</div>
-				<div class="row">
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-					<div class="txt">tom</div>
-				</div>
-				<div class="row">
-					<img class="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
-					<div class="txt">tom</div>
-				</div>
-			</div>
-			<div class="bottomRight">
-				<div class="name">Low InVentory</div>
-				<div class="table">
-					<div class="row">
-						<div class="tableTitle">Item</div>
-						<div class="tableTitle">Remaining</div>
-					</div>
-					<div class="row">
-						<div class="tableLeft">Calola Oil</div>
-						<div class="tableRight">1L</div>
-					</div>
-					<div class="row">
-						<div class="tableLeft">Cedric</div>
-						<div class="tableRight">0</div>
-					</div>
-					<div class="row">
-						<div class="tableLeft">Tomato</div>
-						<div class="tableRight">0</div>
-					</div>
-					<div class="row">
-						<div class="tableLeft">potato</div>
-						<div class="tableRight">0</div>
-					</div>
-					<div class="row">
-						<div class="tableLeft"></div>
-						<div class="tableRight"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>;
-};
+import ReactEcharts from "echarts-for-react"; // 引入echart
+function Home(props) {
+  const GlanceOptions = {
+    // echart 配置
+    xAxis: {
+      type: "category",
+      data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    },
+    yAxis: {
+      type: "value",
+    },
+    series: [
+      {
+        data: [120, 200, 150, 80, 70, 110, 130],
+        type: "bar",
+      },
+    ],
+  };
+  const [currentRange, setCurrentRange] = useState("Yearly");
+  const setCurrentSelect = (selection)=>{
+    setCurrentRange(selection)
+  }
+  return (
+      <div className="container">
+        <div className="row">
+          <div className="topLeft">
+            <div className="row">
+              <div style={{width: "70%"}}>
+                <div className="name" >At a Glance</div>
+                <div className="histogram">
+                  <ReactEcharts
+                    option={GlanceOptions}
+                    style={{ height: 300 }}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="totalData">
+                  <div className=" txt">Total Sales</div>
+                  <div className="money">25,000</div>
+                </div>
+                <div className="totalData">
+                  <div className="txt">Total Refund</div>
+                  <div className="money">50</div>
+                </div>
+                <div className="totalData">
+                  <div className="txt">Total Income</div>
+                  <div className="money">75,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="topMid">
+            <div className={currentRange === "Yearly" ? "choosed module" : "module"} onClick={()=>setCurrentSelect("Yearly")}>Yearly</div>
+            <div className={currentRange === "Monthly" ? "choosed module" : "module"} onClick={()=>setCurrentSelect("Monthly")}>Monthly</div>
+            <div className={currentRange === "Daily" ? "choosed module" : "module"} onClick={()=>setCurrentSelect("Daily")}>Daily</div>
+          </div>
+          <div className="topRight" style={{cursor: "pointer"}}  onClick={()=>props.setCurrentPage("Orders")} >
+            <div className="name">{currentRange}</div>
+            <div className="row">
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+              <div className="order">Order 01</div>
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+            </div>
+            <div className="row">
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+              <div className="order">Order 02</div>
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+            </div>
+            <div className="row">
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+              <div className="order">Order 03</div>
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+            </div>
+            <div className="row">
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+              <div className="order">Order 04</div>
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+            </div>
+          </div>
+        </div>
+        <div className="row bottom">
+          <div className="width">
+            <div className="midLeft ">
+              <div className="row" style={{cursor: "pointer"}} onClick={()=>props.setCurrentPage("Sales")}>
+                <div className="totalTxt">Total Sales</div>
+                <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+                <div className="money">1,632,400</div>
+              </div>
+              <div className="row">
+                <div className="totalTxt">Total Wasted</div>
+                <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+                <div className="money">801,366</div>
+              </div>
+              <div className="row">
+                <div className="totalTxt">Deleted Item</div>
+                <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+                <div className="money">23,884</div>
+              </div>
+            </div>
+            <div className="bottomLeft row" style={{cursor: "pointer"}}  onClick={()=>props.setCurrentPage("Orders")}>
+              <div className="name">Incoming Orders</div>
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+            </div>
+          </div>
+          <div className="bottomMid" style={{cursor: "pointer"}}  onClick={()=>props.setCurrentPage("Supply Chain")}>
+            <div className="name">Suppliers</div>
+            <div className="row">
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+              <div className="txt">tom</div>
+            </div>
+            <div className="row">
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+              <div className="txt">tom</div>
+            </div>
+            <div className="row">
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+              <div className="txt">tom</div>
+            </div>
+            <div className="row">
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+              <div className="txt">tom</div>
+            </div>
+            <div className="row">
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+              <div className="txt">tom</div>
+            </div>
+            <div className="row">
+              <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
+              <div className="txt">tom</div>
+            </div>
+          </div>
+          <div className="bottomRight">
+            <div className="name">Low InVentory</div>
+            <div className="table">
+              <div className="row">
+                <div className="tableTitle">Item</div>
+                <div className="tableTitle">Remaining</div>
+              </div>
+              <div className="row">
+                <div className="tableLeft">Calola Oil</div>
+                <div className="tableRight">1L</div>
+              </div>
+              <div className="row">
+                <div className="tableLeft">Cedric</div>
+                <div className="tableRight">0</div>
+              </div>
+              <div className="row">
+                <div className="tableLeft">Tomato</div>
+                <div className="tableRight">0</div>
+              </div>
+              <div className="row">
+                <div className="tableLeft">potato</div>
+                <div className="tableRight">0</div>
+              </div>
+              <div className="row">
+                <div className="tableLeft"></div>
+                <div className="tableRight"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  );
+}
 
 export default Home;

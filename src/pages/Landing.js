@@ -10,9 +10,9 @@ export default function Landing() {
                 <NavBar />
             </div>
 
-            <div className="menuBar">
+            {/* <div className="menuBar">
                 <MenuBar />
-            </div>
+            </div> */}
 
             <section className="hero is-fullheight">
                 <div className="hero-body">
