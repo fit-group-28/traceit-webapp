@@ -389,7 +389,7 @@ const Stock = () => {
 					onChange={(page) => setPage(page)}
 				/>
 				<div className="supplyChain">
-					<div className="title">My Orders</div>
+					<div className="title">Saless</div>
 					<table className="table is-bordered is-striped is-hoverable is-fullwidth">
 						<thead>
 							<tr>
