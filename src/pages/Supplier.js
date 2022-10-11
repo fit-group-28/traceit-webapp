@@ -1,4 +1,4 @@
-import Map, { Marker, Popup } from "react-map-gl"
+import Map, { Marker } from "react-map-gl"
 import { useState, useEffect } from "react"
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Navbar from "../components/NavBar";
@@ -7,11 +7,11 @@ import DashboardService from "../services/dashboardService";
 const MAPBOX_TOKEN = "pk.eyJ1IjoiZWxsZW54aWFvIiwiYSI6ImNsOHUyc2c3NDA3aGczbm83b25mdXE5aXUifQ.HnZaG4PBlvwZt1HUA90eyw"
 
 export default function Supplier() {
-    const [viewport, setViewport] = useState({
+    const viewport = {
         latitude: -37.900545,
         longitude: 145.087528,
         zoom: 12
-    });
+    };
     const [suppliers, setSuppliers] = useState([])
     const [selectedSupplier, setSelectedSupplier] = useState(null)
     const [isInfoDisplay, setIsInfoDisplay] = useState(false)

@@ -18,20 +18,15 @@ const MenuBar = (props) => {
 
             <aside className={"menu active"}>
                 <ul className="menu-list">
-                    {/* <li>
-                        <Link to="#" className="menu-bars">
-                            <ImIcons.ImCross onClick={showMenuBar} />
-                        </Link>
-                    </li> */}
 
                     {/* Map the menubar items in menubardata */}
                     {MenuBarData.map((item, index) => {
                         return (
                             <li key={index} className={props.currentOption === item.id ? item.cName + " choosed" : item.cName}>
-                                <a onClick={() => props.preventPop(item.id)}>
+                                <button className="menubar-button" onClick={() => props.preventPop(item.id)}>
                                     {item.icon}
                                     <span className="menubar-span">{item.title}</span>
-                                </a>
+                                </button>
                             </li>
                         )
                     })

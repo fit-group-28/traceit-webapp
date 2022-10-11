@@ -24,14 +24,23 @@ $menu-item-hover-background-color: $app-blue-light;
 
 .menu-page {
     .choosed {
-        background: #485fc7 !important;
+        background: #607eaa !important;
     }
 
-    .menu-list a {
+    .menu-list button {
         color: #fff !important;
     }
 }
 
 .menubar-span {
     margin-left: 16px;
+}
+
+.menubar-button {
+    margin: 10px;
+    background: none;
+    color: inherit;
+    border: none;
+    outline: inherit;
+    cursor: pointer;
 }

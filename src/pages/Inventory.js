@@ -31,7 +31,7 @@ function Order() {
 
     const onSearch = (search) => {
         const filtered = items.filter((item) => {
-            const { product, quantity } = item
+            const { product } = item
             return product.name.toLowerCase().includes(search.toLowerCase()) || String(product.product_id).toLowerCase().includes(search.toLowerCase())
         });
         setFilteredItems(filtered);

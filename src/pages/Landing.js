@@ -18,7 +18,7 @@ export default function Landing() {
 
                 <div className="hero-body">
                     <div className="container has-text-centered">
-                        <img src={logo} style={{ height: 300 }}></img>
+                        <img src={logo} style={{ height: 300 }} alt="TraceIt Logo"></img>
                         <p className="title mt-6">
                             TraceIt - Group 28
                         </p>
