@@ -372,7 +372,7 @@ const Supplier = () => {
     return <div>
         <div className="box supplyChainPage">
             <div className="supplyChain">
-                <input value={feedback} onChange={(e) => filterFeedback(e)} className="input is-primary margin-bottom-10" type="text" placeholder="Search By feedback" />
+                <input role="feedback-search" value={feedback} onChange={(e) => filterFeedback(e)} className="input is-primary margin-bottom-10" type="text" placeholder="Search By feedback" />
                 <div className="title">Supplier</div>
                 <table className="table is-bordered is-striped is-hoverable is-fullwidth">
                     <thead>
@@ -386,7 +386,7 @@ const Supplier = () => {
 
                     <tbody>
                         {filterFeedbacks.length > 0 && filterFeedbacks.slice((feedbackpage - 1) * size, feedbackpage * size).map((item) => (
-                            <tr className={selectedSupplierNo === item.orderNo ? "is-selected" : ""} onClick={() => clickSupplier(item.orderNo)}>
+                            <tr key={item.order+item.customerName} className={selectedSupplierNo === item.orderNo ? "is-selected" : ""} onClick={() => clickSupplier(item.orderNo)}>
                                 <td>{item.orderNo}</td>
                                 <td>{item.customerName}</td>
                                 <td>{item.rating}</td>
@@ -414,9 +414,8 @@ const Supplier = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {filterOrders.length > 0 && filterOrders.slice((page - 1) * size, page * size).map((item) => (
-                            <tr>
-                                
+                        {filterOrders.length > 0 && filterOrders.slice((page - 1) * size, page * size).map((item,index) => (
+                            <tr key={item.productName+item.totalAmount+index}>
                                 <td>{item.productName}</td>
                                 <td>{item.totalAmount}</td>
                                 <td style={{ cursor: "pointer" }}>
