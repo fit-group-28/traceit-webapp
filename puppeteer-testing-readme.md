@@ -26,12 +26,13 @@
 
 The output should be as follows if the test is passed:
 
-![](C:\Users\ellen\AppData\Roaming\marktext\images\2022-10-11-23-27-24-image.png)
+![image](https://user-images.githubusercontent.com/48679943/195091369-142d4bf9-8020-48f8-bcb4-dc2bd8a0bcc7.png)
+
 
 
 
 or:
 
- ![](C:\Users\ellen\AppData\Roaming\marktext\images\2022-10-11-23-28-15-image.png)
+![image](https://user-images.githubusercontent.com/48679943/195091231-33863d17-093e-43d7-a9bf-ee0f42f01ce8.png)
 
 if failed.
