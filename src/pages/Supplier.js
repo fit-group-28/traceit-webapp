@@ -3,15 +3,14 @@ import { useState, useEffect } from "react"
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Navbar from "../components/NavBar";
 import DashboardService from "../services/dashboardService";
-import avatar from "../assets/avatar.jpg";
 
 const MAPBOX_TOKEN = "pk.eyJ1IjoiZWxsZW54aWFvIiwiYSI6ImNsOHUyc2c3NDA3aGczbm83b25mdXE5aXUifQ.HnZaG4PBlvwZt1HUA90eyw"
 
 export default function Supplier() {
     const [viewport, setViewport] = useState({
-        latitude: -37.910522,
-        longitude: 145.136215,
-        zoom: 13
+        latitude: -37.900545,
+        longitude: 145.087528,
+        zoom: 12
     });
     const [suppliers, setSuppliers] = useState([])
     const [selectedSupplier, setSelectedSupplier] = useState(null)
@@ -21,7 +20,8 @@ export default function Supplier() {
     useEffect(() => {
         DashboardService.getSuppliers().then(
             (response) => {
-                setSuppliers(response)
+                console.log(response)
+                setSuppliers(response.suppliers)
             }
         ).catch(err => console.log(err))
     }, [])
@@ -46,7 +46,8 @@ export default function Supplier() {
                 <div className="notification is-info"
                     style={{ width: 300, position: "absolute", left: "5%", top: "50%" }}>
                     <p>Supplier Name: <span className="has-text-weight-bold">{selectedSupplier.name}</span></p>
-                    <p>Contact Number: <span className="has-text-weight-bold">{selectedSupplier.contact}</span></p>
+                    <p>Contact Number: <span className="has-text-weight-bold">{selectedSupplier.phone_number}</span></p>
+                    <p>Address: <span className="has-text-weight-bold">{selectedSupplier.address}</span></p>
                 </div>}
 
             <Map
@@ -55,14 +56,15 @@ export default function Supplier() {
                 mapStyle="mapbox://styles/mapbox/streets-v9"
                 mapboxAccessToken={MAPBOX_TOKEN}
             >
+
                 {suppliers.map((supplier) => (
-                    <Marker
-                        key={supplier.id}
-                        latitude={supplier.latitude}
-                        longitude={supplier.longitude}
+                    < Marker
+                        key={supplier.supplier_id}
+                        latitude={supplier.longitude}
+                        longitude={supplier.latitude}
                     >
                         <button
-                            className={`button ${selectedSupplier && selectedSupplier.id === supplier.id ? "is-danger" : "is-primary"}`}
+                            className={`button ${selectedSupplier && selectedSupplier.supplier_id === supplier.supplier_id ? "is-danger" : "is-primary"}`}
                             onClick={() => {
                                 setSelectedSupplier(supplier)
                                 setIsInfoDisplay(true)

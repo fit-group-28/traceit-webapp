@@ -112,12 +112,12 @@ function Order() {
                                 {isActive
                                     ? <div key="1">
                                         <span className="icon">
-                                            <i className="fas fa-check"></i>
+                                            <i className="fas fa-clock"></i>
                                         </span>
                                         <span>History</span></div>
                                     : <div key="2">
                                         <span className="icon">
-                                            <i className="fas fa-clock"></i>
+                                            <i className="fas fa-check"></i>
                                         </span>
                                         <span>Active</span></div>}
                             </button>
@@ -147,7 +147,7 @@ function Order() {
                                             </th>
                                             <th style={{ width: 100 }} ></th>
                                             <th style={{ width: 200 }}>Order ID</th>
-                                            <th style={{ width: 800 }}>Products</th>
+                                            <th style={{ width: 500 }}>Products</th>
                                             <th>Order Date</th>
                                             <th>Status</th>
                                             {isActive && <th style={{ paddingLeft: 70 }}>Operation</th>}

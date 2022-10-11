@@ -29,20 +29,10 @@ function Order() {
         getData()
     }, [])
 
-    // const onSearch = (search) => {
-    //     const filtered = orders.filter((order) => {
-    //         const { order_id, products } = order
-    //         const isValid = isActive ? ACTIVE_STATUS.includes(order.order_status) : INACTIVE_STATUS.includes(order.order_status)
-    //         return isValid && (String(order_id).toLowerCase().includes(search.toLowerCase()) || products.some(product => product.product.name.toLowerCase().includes(search.toLowerCase())))
-    //     });
-    //     setFilteredOrders(filtered);
-    //     setSearch(search)
-    // }
-
     const onSearch = (search) => {
         const filtered = items.filter((item) => {
             const { product, quantity } = item
-            return product.name.toLowerCase().includes(search.toLowerCase()) || String(quantity).toLowerCase().includes(search.toLowerCase())
+            return product.name.toLowerCase().includes(search.toLowerCase()) || String(product.product_id).toLowerCase().includes(search.toLowerCase())
         });
         setFilteredItems(filtered);
         setSearch(search)
