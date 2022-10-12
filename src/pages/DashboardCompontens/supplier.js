@@ -370,9 +370,9 @@ const Supplier = () => {
         console.log(myOrders)
     }
     return <div>
-        <div className="box supplyChainPage">
+        <div className="box supplyChainPage" data-test='component-supplier'>
             <div className="supplyChain">
-                <input role="feedback-search" value={feedback} onChange={(e) => filterFeedback(e)} className="input is-primary margin-bottom-10" type="text" placeholder="Search By feedback" />
+                <input id="feedback-search" value={feedback} onChange={(e) => filterFeedback(e)} className="input is-primary margin-bottom-10" type="text" placeholder="Search By feedback" />
                 <div className="title">Supplier</div>
                 <table className="table is-bordered is-striped is-hoverable is-fullwidth">
                     <thead>

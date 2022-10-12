@@ -402,8 +402,8 @@ const Stock = () => {
 						</tr>
 					</thead>
 					<tbody>
-						{filterStockData.slice((page - 1) * size, page * size).map((item) => (
-							<tr>
+						{filterStockData.slice((page - 1) * size, page * size).map((item, index) => (
+							<tr key={index}>
 								<td>{item.productName}</td>
 								<td>{item.qnt}</td>
 								<td>{item.price}</td>
