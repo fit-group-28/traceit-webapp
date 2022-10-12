@@ -39,9 +39,9 @@ function SignUpForm() {
             <div className="field">
                 <label className="label">Email</label>
                 <div className="control">
-                    <input onChange={e => setEmail(e.target.value)} className={email && !validateEmail(email) ? "input is-danger field" : "input field"} type="email" placeholder="e.g. cedric@gmail.com" />
+                    <input data-testid="email" onChange={e => setEmail(e.target.value)} className={email && !validateEmail(email) ? "input is-danger field" : "input field"} type="email" placeholder="e.g. cedric@gmail.com" />
                 </div>
-                {email ? <p className="help is-danger">{!validateEmail(email) ? "This email is invalid" : ""}</p> : null}
+                {email ? <p data-testid="email-msg" className="help is-danger">{!validateEmail(email) ? "This email is invalid" : ""}</p> : null}
             </div>
 
             {/* username field */}
@@ -49,7 +49,7 @@ function SignUpForm() {
             <div className="field">
                 <label className="label">Username</label>
                 <div className="control">
-                    <input onChange={e => setUsername(e.target.value)} className="input field" type="text" placeholder="e.g. cedliang" />
+                    <input data-testid="username" onChange={e => setUsername(e.target.value)} className="input field" type="text" placeholder="e.g. cedliang" />
                 </div>
                 {/* <p className="help is-success">This username is available</p> */}
             </div>
@@ -58,12 +58,12 @@ function SignUpForm() {
             <div className="field">
                 <label className="label">Password</label>
                 <p className="control">
-                    <input onChange={e => setPassword(e.target.value)} className="input field" type="password" placeholder="Password" />
+                    <input data-testid="password" onChange={e => setPassword(e.target.value)} className="input field" type="password" placeholder="Password" />
                 </p>
             </div>
 
             {/* message */}
-            {msg ? <div className={isSuccess ? "notification is-success is-light" : "notification is-danger is-light"}>
+            {msg ? <div data-testid="msg" className={isSuccess ? "notification is-success is-light" : "notification is-danger is-light"}>
                 {msg}
             </div>
                 : null}

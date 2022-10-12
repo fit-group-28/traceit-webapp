@@ -1,4 +1,4 @@
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logoSVG from "../assets/logoSVG.png";
 
 const getIsLogin = () => {
@@ -9,8 +9,6 @@ const getIsLogin = () => {
 const Navbar = (props) => {
     const navigate = useNavigate();
     const isLogin = getIsLogin();
-    let params = useLocation()
-    console.log(params)
 
     return (
         <nav className="navbar is-white">
@@ -39,7 +37,7 @@ const Navbar = (props) => {
                             <span>Account</span>
                         </button>
 
-                        <div className="navbar-dropdown is-right">
+                        <div data-testid="account-menu" className="navbar-dropdown is-right">
                             {isLogin ? <div>
                                 <Link className="navbar-item" to="/profile">Profile</Link>
                                 <hr className="navbar-divider" />
@@ -51,7 +49,7 @@ const Navbar = (props) => {
                                     Log out
                                 </Link>
                             </div>
-                                : <div>
+                                : <div data-testid="abc">
                                     <Link className="navbar-item" to="/account/login">Login</Link>
                                     <Link className="navbar-item" to="/account/register">Signup</Link>
                                 </div>

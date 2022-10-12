@@ -30,11 +30,11 @@ function LoginForm() {
 
     return (
         <div>
-            {/* name field */}
+            {/* username field */}
             <div className="field" >
                 <label className="label">Username</label>
                 <p className="control">
-                    <input onChange={e => setUsername(e.target.value)} className="input field" type="text" placeholder="Username" />
+                    <input data-testid="username" onChange={e => setUsername(e.target.value)} className="input field" type="text" placeholder="Username" />
                 </p>
             </div>
 
@@ -42,12 +42,12 @@ function LoginForm() {
             <div className="field">
                 <label className="label">Password</label>
                 <p className="control">
-                    <input onChange={e => setPassword(e.target.value)} className="input field" type="password" placeholder="Password" />
+                    <input data-testid="password" onChange={e => setPassword(e.target.value)} className="input field" type="password" placeholder="Password" />
                 </p>
             </div>
 
             {/* error message */}
-            {error ? <div className="notification is-danger is-light">
+            {error ? <div data-testid="msg" className="notification is-danger is-light">
                 {error}
             </div>
                 : null}
