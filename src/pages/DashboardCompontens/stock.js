@@ -341,7 +341,7 @@ const Stock = () => {
 						<div class="field">
 							<label class="label">Name</label>
 							<div class="control">
-								<input class="input" type="text" placeholder="e.g Apple" />
+								<input name="type-input" class="input" type="text" placeholder="e.g Apple" data-test="type-input"/>
 							</div>
 						</div>
 						<div class="field">
