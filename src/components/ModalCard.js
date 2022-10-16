@@ -12,8 +12,8 @@ export default function ModalCard({ visible, title, onClose, onSave, children })
                     {children}
                 </section>
                 <footer className="modal-card-foot">
-                    <button className="button is-success" onClick={onSave}>Submit</button>
-                    <button className="button" onClick={onClose}>Cancel</button>
+                    <button data-testid="save-btn" className="button is-success" onClick={onSave}>Submit</button>
+                    <button data-testid="close-btn" className="button" onClick={onClose}>Cancel</button>
                 </footer>
             </div>
         </div>

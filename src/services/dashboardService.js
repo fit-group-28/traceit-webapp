@@ -1,3 +1,4 @@
+import axios from 'axios';
 import request from './request';
 
 const order_URL = "/api/order";
@@ -6,7 +7,12 @@ const supplier_URL = "/api/supplier";
 const product_URL = "/api/product";
 
 const getOrders = () => {
-    return request(order_URL)
+    return axios.get(order_URL, {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('user')}`
+        }
+    })
+
 }
 
 const patchOrder = (data) => {
@@ -14,7 +20,11 @@ const patchOrder = (data) => {
 }
 
 const postOrder = (data) => {
-    return request(order_URL, { method: "POST", data })
+    return axios.post(order_URL, data, {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('user')}`
+        }
+    })
 }
 
 const getInventory = () => {
@@ -31,7 +41,11 @@ const getSuppliers = () => {
 }
 
 const getProducts = () => {
-    return request(product_URL)
+    return axios.get(product_URL, {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('user')}`
+        }
+    })
 }
 
 

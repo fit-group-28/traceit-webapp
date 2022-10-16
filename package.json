@@ -28,10 +28,17 @@
   "scripts": {
     "start": "cross-env PORT=1234 react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test:u": "react-scripts test --silent --testPathIgnorePatterns=test/.*e2e.test.js$",
+    "test": "react-scripts test --silent --coverage --testPathIgnorePatterns=test/.*e2e.test.js",
     "test:e2e": "react-scripts test --testPathPattern=test/.*e2e.test.js$",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/pages/DashboardCompontens",
+      "!src/index.js",
+      "!src/setupProxy.js"
+    ]
   },
   "eslintConfig": {
     "extends": [

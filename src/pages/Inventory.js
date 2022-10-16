@@ -65,7 +65,6 @@ function Order() {
     }
 
     const onDelete = (id) => {
-        // 调用删除接口 成功则调用getData 
         DashboardService.patchInventory({ product_id: id, quantity: 0 }).then(
             () => {
                 getData()
@@ -91,7 +90,7 @@ function Order() {
                             <div className="level-item">
                                 <div className="field">
                                     <p className="control has-icons-left">
-                                        <input value={search} onChange={e => onSearch(e.target.value)} className="input search-bar" type="text" placeholder="Search for item ID, item name..." />
+                                        <input data-testid="search-bar" value={search} onChange={e => onSearch(e.target.value)} className="input search-bar" type="text" placeholder="Search for item ID, item name..." />
                                         <span className="icon is-left">
                                             <i className="fas fa-search" aria-hidden="true"></i>
                                         </span>
@@ -108,7 +107,7 @@ function Order() {
                                 </span>
                             </button>
 
-                            <button onClick={onSave} className={`button mr-2 ${isReadOnly ? "is-success" : "is-warning"}`}>
+                            <button data-testid="switch" onClick={onSave} className={`button mr-2 ${isReadOnly ? "is-success" : "is-warning"}`}>
                                 {isReadOnly ?
                                     <div key='666'>
                                         <span className="icon">

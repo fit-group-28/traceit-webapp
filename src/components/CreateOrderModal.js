@@ -11,7 +11,7 @@ export default function CreateOrderModal({ onSuccess }) {
     const getProducts = () => {
         setLoading(true)
         DashboardService.getProducts().then(r => {
-            setProducts(r.data.products)
+            setProducts(r.data.data.products)
         }).catch(err => console.log(err)).finally(() => setLoading(false))
     }
 
@@ -33,7 +33,6 @@ export default function CreateOrderModal({ onSuccess }) {
     }
 
     const handleSubmit = () => {
-        console.log(quantityMap)
         const keys = Object.keys(quantityMap)
 
         if (keys.length === 0 || keys.every(key => quantityMap[key] === 0)) {
@@ -43,7 +42,9 @@ export default function CreateOrderModal({ onSuccess }) {
 
         const products = Object.keys(quantityMap).filter(id => quantityMap[id] !== 0).map(id => ({ product_id: Number(id), quantity: quantityMap[id] }))
 
+        console.log("HELLO", products)
         DashboardService.postOrder({ products }).then(r => {
+            console.log("response---", r)
             handleClose()
             onSuccess()
         }).catch(err => alert(err.message))
@@ -74,11 +75,12 @@ export default function CreateOrderModal({ onSuccess }) {
                     </thead>
                     <tbody>
 
-                        {products.map((product) => (<tr key={product.product_id}>
-                            <td>{product.name}</td>
+                        {products.map((product, i) => (<tr key={product.product_id}>
+                            <td data-testid={`name-${i}`}>{product.name}</td>
                             <td>{product.description}</td>
                             <td>
                                 <input
+                                    data-testid={`qty-${i}`}
                                     className="input"
                                     type="number"
                                     value={quantityMap[product.product_id] || 0}
