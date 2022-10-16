@@ -341,7 +341,7 @@ const Stock = () => {
 						<div class="field">
 							<label class="label">Name</label>
 							<div class="control">
-								<input class="input" type="text" placeholder="e.g Apple" />
+								<input name="type-input" class="input" type="text" placeholder="e.g Apple" data-test="type-input"/>
 							</div>
 						</div>
 						<div class="field">
@@ -402,8 +402,8 @@ const Stock = () => {
 						</tr>
 					</thead>
 					<tbody>
-						{filterStockData.slice((page - 1) * size, page * size).map((item) => (
-							<tr>
+						{filterStockData.slice((page - 1) * size, page * size).map((item, index) => (
+							<tr key={index}>
 								<td>{item.productName}</td>
 								<td>{item.qnt}</td>
 								<td>{item.price}</td>
