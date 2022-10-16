@@ -12,8 +12,9 @@ request.interceptors.request.use((config) => {
     return config
 })
 
-request.interceptors.response.use((response) => {
-    return response.data
+request.interceptors.response.use((res1) => {
+    // console.log("res1ponse ---", res1)
+    return res1.data
 }, err => {
     // if not authorised, redirect to login
     if (err.response.status === 401) {

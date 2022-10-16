@@ -16,7 +16,6 @@ export default function Supplier() {
     const [selectedSupplier, setSelectedSupplier] = useState(null)
     const [isInfoDisplay, setIsInfoDisplay] = useState(false)
 
-
     useEffect(() => {
         DashboardService.getSuppliers().then(
             (response) => {
@@ -50,34 +49,36 @@ export default function Supplier() {
                     <p>Address: <span className="has-text-weight-bold">{selectedSupplier.address}</span></p>
                 </div>}
 
-            <Map
-                initialViewState={viewport}
-                style={{ margin: "auto", width: "800px", height: "600px" }}
-                mapStyle="mapbox://styles/mapbox/streets-v9"
-                mapboxAccessToken={MAPBOX_TOKEN}
-            >
+            <div data-testid="map">
 
-                {suppliers.map((supplier) => (
-                    < Marker
-                        key={supplier.supplier_id}
-                        latitude={supplier.longitude}
-                        longitude={supplier.latitude}
-                    >
-                        <button
-                            className={`button ${selectedSupplier && selectedSupplier.supplier_id === supplier.supplier_id ? "is-danger" : "is-primary"}`}
-                            onClick={() => {
-                                setSelectedSupplier(supplier)
-                                setIsInfoDisplay(true)
-                            }}>
-                            <span className="icon">
-                                <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
-                            </span>
-                        </button>
-                    </Marker>
-                ))}
+                <Map
+                    initialViewState={viewport}
+                    style={{ margin: "auto", width: "800px", height: "600px" }}
+                    mapStyle="mapbox://styles/mapbox/streets-v9"
+                    mapboxAccessToken={MAPBOX_TOKEN}
+                >
+                    {suppliers.map((supplier, i) => (
+                        < Marker
+                            key={supplier.supplier_id}
+                            latitude={supplier.longitude}
+                            longitude={supplier.latitude}
+                        >
+                            <button
+                                data-testid={`marker-${i}`}
+                                className={`button ${selectedSupplier && selectedSupplier.supplier_id === supplier.supplier_id ? "is-danger" : "is-primary"}`}
+                                onClick={() => {
+                                    setSelectedSupplier(supplier)
+                                    setIsInfoDisplay(true)
+                                }}>
+                                <span className="icon">
+                                    <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </Marker>
+                    ))}
 
 
-                {/* {selectedSupplier && (
+                    {/* {selectedSupplier && (
                     <>
                         <Popup
                             latitude={selectedSupplier.latitude}
@@ -92,7 +93,9 @@ export default function Supplier() {
                     </>
                 )} */}
 
-            </Map>
+                </Map>
+            </div>
+
         </>
     );
 }

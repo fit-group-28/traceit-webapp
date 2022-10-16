@@ -16,7 +16,6 @@ function LoginForm() {
             await AccountService.login(username, password).then(
                 () => {
                     navigate("/profile")
-                    // console.log("SUCCESS")
                 },
                 (error) => {
                     setError("ERROR")

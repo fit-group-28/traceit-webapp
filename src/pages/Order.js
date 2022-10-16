@@ -23,10 +23,12 @@ function Order() {
         setLoading(true)
         DashboardService.getOrders().then(
             (response) => {
-                setOrders(response.data.orders)
-                setFilteredOrders(response.data.orders.filter(order => ACTIVE_STATUS.includes(order.order_status)))
+                setOrders(response.data.data.orders)
+                setFilteredOrders(response.data.data.orders.filter(order => ACTIVE_STATUS.includes(order.order_status)))
             }
-        ).catch(err => console.log(err))
+        ).catch(err => {
+            // console.log(err)
+        })
             .finally(() => setLoading(false))
     }
 
@@ -64,7 +66,7 @@ function Order() {
     }
 
     const onStatusChange = (id, status) => {
-        console.log(id, status)
+        // console.log(id, status)
         dashboardService.patchOrder({ order_id: id, order_status: status }).then(() => {
             getData()
         }).catch(err => alert(err.message))
@@ -108,7 +110,7 @@ function Order() {
 
                             <CreateOrderModal onSuccess={getData} />
 
-                            <button onClick={handleHistory} className={`button mr-2 ${isActive ? "is-warning" : "is-success"}`}>
+                            <button data-testid="switch" onClick={handleHistory} className={`button mr-2 ${isActive ? "is-warning" : "is-success"}`}>
                                 {isActive
                                     ? <div key="1">
                                         <span className="icon">
@@ -136,7 +138,7 @@ function Order() {
                     <div className="card-content">
                         <div className="b-table has-pagination">
                             <div className="table-wrapper">
-                                <table className="table is-fullwidth is-striped is-hoverable is-fullwidth">
+                                <table data-testid="order-table" className="table is-fullwidth is-striped is-hoverable is-fullwidth">
                                     <thead>
                                         <tr>
                                             <th className="is-checkbox-cell" style={{ width: 50 }}>
@@ -157,9 +159,9 @@ function Order() {
                                     <tbody>
 
                                         {/* sample API data */}
-                                        {filteredOrders.map((order) => {
+                                        {filteredOrders.map((order, i) => {
                                             return (
-                                                <tr key={order.order_id}>
+                                                <tr data-testid={`order-${i}`} key={order.order_id}>
                                                     <td className="is-checkbox-cell">
                                                         <label className="b-checkbox checkbox">
                                                             <input type="checkbox" value="false" />
