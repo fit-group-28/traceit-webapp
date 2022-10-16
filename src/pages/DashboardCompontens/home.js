@@ -109,7 +109,7 @@ function Home(props) {
               <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
             </div>
           </div>
-          <div className="bottomMid" style={{cursor: "pointer"}}  onClick={()=>props.setCurrentPage("Supply Chain")}>
+          <div data-test="supply-chain-card" className="bottomMid" style={{cursor: "pointer"}}  onClick={()=>props.setCurrentPage("Supply Chain")}>
             <div className="name">Suppliers</div>
             <div className="row">
               <img className="icon" src={SeacrhIcon} alt="TraceIt Logo"></img>
