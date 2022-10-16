@@ -51,7 +51,7 @@ export default function CreateOrderModal({ onSuccess }) {
 
     return (
         <>
-            <button onClick={() => setIsOpen(true)} className="button mr-2 is-info">
+            <button data-testid="add-order" onClick={() => setIsOpen(true)} className="button mr-2 is-info">
                 <span className="icon">
                     <i className="fas fa-plus"></i>
                 </span>
